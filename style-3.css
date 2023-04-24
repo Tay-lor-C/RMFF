@@ -1,0 +1,571 @@
+:root{
+	--transition: all 0.3s linear;
+
+	--banner-color: rgb(155,115,89);
+	--navbar-color:  rgba(106,64,48,0.8);
+	--btn-color: rgba(171,103,74,1);
+
+	--white-background: rgba(226,219,216,0.6);
+	--white: rgba(226,219,216,1);
+
+	--banner-color2: rgb(155,115,89);
+	--btn-color2: rgb(84,91,92);
+
+	--header-color: rgb(213,167,93);
+
+	--radius: 1.27vh;
+	--border: 2px solid black;
+}
+
+
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	min-height: 100vh;
+	background: url(img/background.jpg) center/cover no-repeat rgba(226,219,216,0.6);
+	box-shadow: inset 0 0 0 1000px rgba(226,219,216,0.5);
+}
+
+
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	color: whitesmoke;
+	height: 12.75vh;
+	transition: var(--transition);
+}
+
+/* change logo dimentions */
+.logo{
+	height: 12.7vh;
+	width: 25.5vh;
+	opacity: 0.8;
+}
+.navbar-links ul{
+	margin: 0;
+	padding: 0;
+	margin-right: 1.5rem;
+	display: flex;
+}
+
+.navbar-links li{
+	list-style: none;
+}
+
+.navbar-links li a{
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 3rem;
+	display: block;
+	font-size: 1.5rem;
+	justify-content: space-between;
+
+}
+
+.navbar-links li a:hover{
+	color: #555;
+}
+
+.toggle-button{
+	position: absolute;
+	top: 2.75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 3.8vh;
+	height: 2.7vh;
+}
+
+.toggle-button .bar{
+	height: 0.38vh;
+	width: 100%;
+	background-color: black;
+	border-radius: var(--radius);
+}
+
+@media (max-width: 800px){
+	.toggle-button{
+		display: flex;
+		align-items: center;
+	}
+	.navbar-links{
+		display: none; 
+		width: 100%;
+		align-items: center;
+		padding-top: 3.8vh;
+	}
+.navbar {
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: var(--white);
+}
+.navbar-links ul{
+	width: 100%;
+	flex-direction: column;
+}
+.navbar-links li{
+	text-align: center;
+}
+.navbar-links li a{
+	padding: 0.5rem 1rem;
+	background-color: var(--container-color);
+
+} 
+.navbar-links.active{
+	display: flex;
+}
+
+}
+
+/* Banner */
+
+.banner{
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	text-align: center;
+
+}
+
+.container{
+	/* background-color: var(--white-background); */
+	border-radius: var(--radius);
+	padding-bottom: 2.87rem;
+	padding-right: 2.87rem;
+	padding-left: 2.87rem;
+	opacity: 0.8;
+	object-fit: contain;
+	/* border: var(--border); */
+}
+
+.teck-logo-top{
+	width: 100%;
+	height: auto;
+	margin-top: -4.9vh;
+	margin-bottom: -4.9vh;
+}
+
+.rmff-logo{
+	margin-top: -6.9vh;
+	margin-bottom: -4.9vh;
+	width: 100%;
+	height: auto;
+}
+
+.btn {
+	border-radius: var(--radius);
+	border: var(--border);
+	padding: 1rem;
+	font-size: 1.5rem;
+	margin-top: 60rem;
+	background-color: lightgrey;
+	z-index: 1;
+	text-decoration: none;
+	color: black;
+}
+
+.btn:hover{
+	opacity: 1;
+	background-color: var(--btn-color2);
+}
+
+.sponsor-container{
+	display: flex;
+	max-width: 100%;
+}
+
+
+
+.sponsor-container-top{
+	display: flex;
+	max-width: 100%; 
+	height: 40vh;
+	justify-content: center;
+	margin-top: -7.88vh;
+	margin-bottom: -5.9vh;
+}
+
+.sponsor-container-middle{
+	display: flex;
+	max-width: 100%;
+	justify-content: space-between;
+	object-fit: contain;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.sponsor-container-bottom{
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+	height: 20vh;
+	margin: 1rem;
+}
+
+.logo {
+	/* height: 200px;
+	width: 200px; 
+	height: 20vh;
+	width: 22vw; */
+	max-width: 100%;
+	height: auto;
+	margin-right: 15px;
+	padding: 0.5rem;
+	justify-content: space-between;
+	object-fit: contain;
+}
+
+.logo-flux{
+	max-width: 70%;
+	height: auto;
+	margin-right: 15px;
+	padding: 0.5rem;
+	justify-content: space-between;
+	object-fit: contain;
+}
+
+.logo-snow{
+	max-width: 90%;
+	height: auto;
+	margin-right: 15px;
+	padding: 1rem;
+	justify-content: space-between;
+	object-fit: contain;
+}
+
+.logo-container{
+	justify-content: center;
+	align-content: center;
+	flex-direction: row;
+	object-fit: contain;
+	margin: auto;
+}
+
+.inline-sponsor{
+	margin-left: 10vw;
+	margin-right: 10vw;
+	text-align: center;
+} 
+
+/* .inline-logo-container{
+	height: 5vh;
+	object-fit: contain;
+} */
+
+.inline-logo{
+	display: inline-block;
+	height: 5vw;
+	max-width: 100%;
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
+
+
+
+.sponsor-message{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.raffle{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.raffle h2{
+	text-align: center;
+}
+
+.logo-raffle{
+	justify-content: center;
+	width: 25vw;
+}
+
+}
+/* Section Formatting */
+.schedule{
+	background: url(img/snow-background.jpeg) center/cover repeat-y;
+}
+
+.section-header{
+	background-color: var(--white);
+}
+
+.section-title{
+	font-size: 2.5rem;
+	text-align: center;
+	background-color: var(--white);
+	border-radius: var(--radius);
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	margin-bottom: 0;
+}
+
+.section-description{
+	font-size: 1.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: normal;
+	background-color: var(--white);
+	margin-top: 0;
+	padding: 1rem;
+}
+
+/* Films */
+.films-container{
+	margin: 1.9vh;
+	background-color: lightgrey;
+}
+
+.poster{
+	max-width: 100%; 
+	max-height: 455px;
+	border-radius: var(--radius);
+	background-size: contain;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+/* Alt. */
+.team-container{
+	padding: 0 1.49vh;
+}
+
+.team-column{
+	float: left;
+	width: 25%;
+	margin-bottom: 2.04vh;
+	padding: 0 1.02vh;
+	border-radius: var(--radius);
+	max-height: auto;
+}
+
+.team-row{
+	height: auto;
+	display:inline-block;
+	width: 100%;
+}
+
+.team-card{
+	background-color: var(--primary-color);
+	border-radius: 25px;
+	height: auto;
+	background-size: contain;
+	text-align: center;
+}
+
+.team-card:hover{
+	opacity: 1;
+	transition: 0.5s ease;
+}
+
+.team-img{
+	width: 100%;
+	border-radius: 1.65vw;
+	/* margin-bottom: 100px; */
+}
+
+.card-container{
+	padding: 0 16px;
+}
+
+.card-container::after, .team-card:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.name{
+	text-align: center;
+	color: black;
+	font-size: 2vw;
+}
+
+.title{
+	text-align: center;
+	font-size: 1.25vw;
+	color: black;
+}
+
+.card-text{
+	text-align: center;
+	font-size: 1vw;
+	color: black;
+	font-style: normal;
+}
+
+.btn-container{
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+}
+
+.ticket-btn{
+	border-radius: var(--radius);
+	border: var(--border);
+	padding: 1rem;
+	font-size: 1.5rem;
+	background-color: lightgrey;
+	z-index: 1;
+	text-decoration: none;
+	color: black;
+}
+
+.ticket-btn:hover{
+	opacity: 1;
+	background-color: var(--btn-color2);
+}
+
+@media screen and (max-width: 800px){
+    .company-header, .story-header, .team-header{
+        margin: 5px 5px 5px 10px;
+    }
+    .ops-team{
+    	margin-top: 960px;
+    	margin: 130vw 1.34vw 0.75vw 1.34vw;
+    }
+    .banner{
+    	margin-top: 25vh;
+    }
+    .poster{
+    	height: 40vh;
+    	width: 100%;
+    }
+    
+    .team-row{
+    	height: 100%;
+    	/* display: inline-block; */
+    }
+    .team-card{
+    	height: 100%;
+    }
+    .card-container{
+    	height: 18vh;
+    }
+
+    .story-photo{
+    	float: none;
+    	width: 100%;
+    	text-align: center;
+    }
+    .team-column{
+		width: 50%;
+		display: block;
+	}
+	.story-row,
+	.story-column {
+		width: 100%;
+		text-align: center;
+	}
+	/* img{
+		width: 100%;
+		height: auto;
+	} */
+	.name{
+		font-size: 3vw;
+	}
+	.title{
+		font-size: 2vw;
+	}
+	.card-text{
+	font-size: 2vw;
+	}
+	.btn-cpny-1{
+		font-size: 2vw;
+		padding-left: 6.6vw;
+		padding-right:  6.6vw;
+		padding-bottom: 1.32vw;
+		margin: auto;
+	}
+	 .menu-wrap, .checkbox, .hamburger, .menu{
+	opacity: 1.0;
+	} 
+}
+
+/* Events */
+.events-container{
+	margin: 1.39vh;
+	background-color: lightgrey;
+}
+
+.event-photo{
+	background-color: lightblue;
+	height: 10vh;
+	padding: 10vh;
+	margin: 2vh;
+	text-align: center;
+}
+
+/* Schedule */
+.schedule-date{
+	text-align: center;
+}
+.event-container{
+	/* background-color: var(--header-color);*/
+	background: url(img/snow-background.jpeg) center/cover repeat-y;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: var(--radius);
+}
+.event{
+	background-color: lightgrey;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	text-align: center;
+	border-radius: var(--radius);
+}
+
+/* Tickets */
+
+footer{
+	background-color: var(--white);
+	height: 10vh;
+	border: solid 3px black;
+	border-radius: var(--radius);
+
+}
+
+footer p{
+	text-align: center;
+	padding-top: 4vh;
+}
+
+
